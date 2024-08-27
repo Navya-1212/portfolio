@@ -28,7 +28,7 @@
   position: absolute;
   top: 3rem;
   right: -5rem;
-  z-index: -1; /* Background image behind content */
+  z-index: -1; 
   object-fit: cover;
   width: 21rem;
   height: 21rem;
@@ -298,14 +298,14 @@
   .bg {
     right: 50%; 
     top: -10rem; 
-    width: 17rem; 
-    height: 17rem;
+    width: 18rem; 
+    height: 18rem;
     transform: translateX(50%);
     z-index: 0; 
   }
   .introContent {
     font-size: 12vw;
-    max-width: 80%;
+    max-width: 90%;
     padding: 0.3rem;
     position: relative; 
     z-index: 1; 
