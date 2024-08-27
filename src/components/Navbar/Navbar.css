@@ -1,3 +1,4 @@
+/* General Navbar Styles */
 .navbar {
   height: 5rem;
   width: 100vw;
@@ -9,29 +10,29 @@
   position: sticky;
   top: 0;
   z-index: 3;
-  background-color:  #f0f0f0;
+  background-color: #f0f0f0;
 }
 .logoContainer {
   display: flex;
   align-items: center;
 }
 
-.name  {
+.name {
   margin-left: -0.5rem;
   font-size: 2rem;
   font-weight: bold;
   position: relative;
-  animation: flipInX 3s infinite; 
+  animation: flipInX 3s infinite;
 }
 
 @keyframes flipInX {
   from {
     transform: perspective(400px) rotateX(90deg);
     opacity: 0;
-    color: #08176a; 
+    color: #08176a;
   }
   50% {
-    color: #c71959; 
+    color: #c71959;
   }
   to {
     transform: perspective(400px) rotateX(0deg);
@@ -44,6 +45,11 @@
   height: 4rem;
   width: 4rem;
 }
+
+/* Desktop Menu Styles */
+.desktopMenu {
+  display: flex;
+}
 .desktopMenuListItem {
   margin: 1.5rem;
   cursor: pointer;
@@ -54,7 +60,7 @@
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #000;
 }
-.desktopMenuBtn{
+.desktopMenuBtn {
   border: none;
   display: block;
   position: relative;
@@ -65,7 +71,7 @@
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  color:black;
+  color: black;
   z-index: 1;
   font-family: inherit;
   font-weight: 500;
@@ -88,7 +94,6 @@ button span::before {
   position: absolute;
   width: 8%;
   height: 500%;
- 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-60deg);
@@ -98,7 +103,7 @@ button span::before {
 button:hover span::before {
   transform: translate(-50%, -50%) rotate(-90deg);
   width: 100%;
-  background: black
+  background: black;
 }
 
 button:hover {
@@ -109,42 +114,47 @@ button:active span::before {
   background: black;
 }
 
-.desktopMenuListImg {
-  object-fit: cover;
-  height: 1rem;
-  width: 1rem;
-  margin: 1rem;
-}
-.active{
+.active {
   color: #c71959;
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid  #c71959;
-}
-.mobMenu{
-  display: none;
-  object-fit: cover;
-  height: 1rem;
-}
-.navMenu{
-position: absolute;
-top: 4rem;
-right: 2rem;
-z-index:2 ;
-display: flex;
-flex-direction: column;
-padding: 0.5rem;
-height: fit-content;
-min-height: 15rem;
-background: white;
-border-radius: 1rem;
-}
-.listItem{
-color: white;
-padding: 0.5rem;
-margin: 0.25rem;
-background-color: rgb(203, 195, 195);
+  border-bottom: 3px solid #c71959;
 }
 
+/* Mobile Menu Icon */
+.mobMenu {
+  display: none;
+  object-fit: cover;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.navMenu {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  width: 80%;
+}
+
+.navMenu.active {
+  display: flex;
+}
+
+.listItem {
+  color: black;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  background-color: rgb(203, 195, 195);
+  text-align: center;
+}
+
+/* Media Queries for Responsive Design */
 @media screen and (max-width: 1080px) {
   .name {
     font-size: 1.8rem;
@@ -164,21 +174,19 @@ background-color: rgb(203, 195, 195);
   }
 }
 @media screen and (max-width: 720px) {
+  .desktopMenu,
+  .desktopMenuBtn {
+    display: none;
+  }
+  .mobMenu {
+    display: block;
+  }
   .name {
     font-size: 1.5rem;
   }
   .logo {
     height: 3rem;
     width: 3rem;
-  }
-  .desktopMenuListItem {
-    margin: 0.8rem;
-    font-size: 1rem;
-  }
-  .desktopMenuBtn {
-    padding: 0.8rem 1.2rem;
-    margin: 0.5rem 0.8rem;
-    font-size: 1rem;
   }
   .navMenu {
     top: 3.5rem;
@@ -195,52 +203,6 @@ background-color: rgb(203, 195, 195);
   }
   .logo {
     height: 3rem;
-    width: 3rem;
-  }
-  .desktopMenuListItem {
-    margin: 1rem;
-    font-size: 1rem;
-  }
-  .desktopMenuBtn {
-    padding: 1rem 1.5rem;
-    margin: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-  .navMenu {
-    top: 3.5rem;
-    right: 1rem;
-    min-height: 10rem;
-  }
-  .listItem {
-    padding: 0.5rem;
-    margin: 0.25rem;
+    width: 3
   }
 }
-
-@media screen and (max-width: 360px) {
-  .name {
-    font-size: 1.2rem;
-  }
-  .logo {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-  .desktopMenuListItem {
-    margin: 0.5rem;
-    font-size: 0.9rem;
-  }
-  .desktopMenuBtn {
-    padding: 0.8rem 1.2rem;
-    margin: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-  .navMenu {
-    top: 3rem;
-    right: 1rem;
-    min-height: 8rem;
-  }
-  .listItem {
-    padding: 0.4rem;
-    margin: 0.2rem;
-  }
-}     

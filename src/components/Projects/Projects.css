@@ -1,3 +1,96 @@
+/* Container styling */
+.projects {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.projects.visible {
+  opacity: 1;
+}
+
+/* Title styling */
+.projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 30px; 
+  justify-content: center; 
+  padding: 10px 0;
+  margin: 0 40px;
+  width: 100%;
+
+}
+
+
+.project-card {
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Distribute space evenly between children */
+  flex: 1 1 calc(33.333% - 30px); 
+  max-width: 400px; 
+  flex-grow: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1.5px solid black;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 30px; 
+}
+
+.project-card:hover {
+  transform: translateY(-10px); 
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  color: #2c0887;
+  font-size: 1.2em;
+  margin: 20px 0 10px;
+}
+
+.project-card p {
+  padding: 2px 20px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.view-button {
+  display: inline-block;
+  margin: 20px auto 4px;
+  padding: 8px 15px;
+  background-color: #ed0a61;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.view-button:hover {
+  background-color: #e68a00;
+}
+
+/* Animation for the project cards */
+.projects.visible .project-card {
+  animation: slideIn 0.5s ease forwards;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -9,102 +102,23 @@
   }
 }
 
-.projects {
-  text-align: center;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  min-height: 500px;
-  opacity: 0;
-}
-
-.projects.visible {
-  opacity: 1;
-}
-
-.projects h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.carousel {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px 0;
-  margin: 0 40px; 
-}
-
-.project-card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 400px;
-  transition: transform 0.3s ease;
-  height: 400px;
-  border: 1.5px solid black;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-}
-
-.project-card h3 {
-  color: #2c0887;
-  font-size: 1em;
-  margin: 20px 0 10px;
-}
-
-.project-card p {
-  padding: 0 20px;
-  font-size: 0.7em;
-  color: #333;
-}
-
-.view-button {
-  display: inline-block;
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: #ed0a61;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.view-button:hover {
-  background-color: #e68a00;
-}
-
-.projects.visible .project-card {
-  animation: slideIn 0.5s ease forwards;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .project-card {
+    flex: 1 1 calc(50% - 30px); /* Two cards per row for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
-  .carousel {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .project-card {
-    width: 80%;
-    margin-bottom: 20px;
+    flex: 1 1 100%; /* One card per row for small screens */
+    max-width: 100%; /* Full width for small screens */
   }
 }
 
 @media (max-width: 480px) {
   .projects h2 {
     font-size: 2em;
-  }
-
-  .project-card {
-    width: 100%;
   }
 
   .project-card p {

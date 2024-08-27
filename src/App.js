@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="app">
+    <div className="main-app">
       <Navbar />
       <Intro />
       <AboutMe />
@@ -22,4 +22,3 @@ function App() {
 }
 
 export default App;
-

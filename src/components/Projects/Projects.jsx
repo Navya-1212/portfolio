@@ -11,6 +11,7 @@ const projects = [
     imageUrl: ShopHub,
     link: "https://github.com/Navya-1212/Ecom-Project"
   },
+
   {
     title: "Random Joke Generator",
     description:"Employs the Fetch API in JavaScript to make asynchronous requests to a Jokes website API, retrieving and displaying jokes dynamically on the webpage.",

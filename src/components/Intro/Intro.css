@@ -10,20 +10,25 @@
 }
 
 .intro {
-  height: calc(85vh - 4rem);
+  height: calc(88vh - 4rem);
   width: 100vw;
   max-width: 75rem;
   margin: 0 auto;
   position: relative;
   z-index: 1;
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
 }
+
 
 .bg {
   position: absolute;
   top: 3rem;
   right: -5rem;
-  z-index: -1;
+  z-index: -1; /* Background image behind content */
   object-fit: cover;
   width: 21rem;
   height: 21rem;
@@ -56,15 +61,18 @@
 }
 
 .introContent {
-  height: 100vh;
+  height: auto; 
   width: 100%;
   padding: 2rem;
   font-size: 3rem;
   font-weight: 500;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   max-width: 60%;
+  position: relative;
+  z-index: 1; 
+  text-align: center; 
 }
 
 .hello {
@@ -106,7 +114,7 @@
 
 .scroll-symbol-container {
   position: absolute;
-  bottom: 2rem;
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -232,19 +240,27 @@
   }
 }
 
+/* Adjustments for smaller screens */
 @media screen and (max-width: 1080px) {
   .intro {
     margin-top: 7rem;
   }
   .bg {
     right: 9vw;
+    width: 15rem; 
+    height: 15rem;
   }
   .introContent {
     font-size: 8vw;
     max-width: 80%;
+    padding: 1rem; 
   }
   .hello {
     font-size: 4vw;
+  }
+  .introtext {
+    font-size: 1.8rem; 
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -254,28 +270,52 @@
   }
   .bg {
     right: 6vw;
+    width: 12rem; 
+    height: 12rem;
   }
   .introContent {
     font-size: 10vw;
     max-width: 85%;
+    padding: 0.5rem; 
   }
   .hello {
     font-size: 5vw;
+  }
+  .introtext {
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro {
     margin-top: 12rem;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    position: relative; 
   }
   .bg {
-    right: 4vw;
+    right: 50%; 
+    top: -10rem; 
+    width: 8rem; 
+    height: 8rem;
+    transform: translateX(50%);
+    z-index: 0; 
   }
   .introContent {
     font-size: 12vw;
     max-width: 90%;
+    padding: 0.5rem;
+    position: relative; 
+    z-index: 1; 
   }
   .hello {
     font-size: 6vw;
   }
+  .introtext {
+    font-size: 1.2rem; 
+    margin-bottom: 0.3rem;
+  }
+
 }
