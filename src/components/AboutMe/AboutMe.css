@@ -139,6 +139,7 @@
 }
 
 @media (max-width: 480px) {
+  
   .about-me-content h2 {
     font-size: 1.2rem;
   }
