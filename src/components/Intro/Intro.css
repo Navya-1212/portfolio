@@ -21,6 +21,7 @@
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
+  text-align: center;
 }
 
 
@@ -35,7 +36,7 @@
   border-radius: 50%;
 }
 
-.scrolling-text-container {
+/*.scrolling-text-container {
   position: absolute;
   bottom: 7rem;
   left: 50%;
@@ -58,7 +59,7 @@
   to {
     transform: translateX(0%);
   }
-}
+}*/
 
 .introContent {
   height: auto; 
@@ -114,7 +115,7 @@
 
 .scroll-symbol-container {
   position: absolute;
-  bottom: -2rem;
+  bottom: 0rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -291,8 +292,9 @@
   .intro {
     margin-top: 13rem;
     height: auto;
+    
    /* flex-direction: column; 
-    align-items: center; 
+     align-items: center;
     text-align: center; 
     position: relative; */
   }
@@ -301,12 +303,14 @@
     right: 7rem;
     width: 12rem;
     height: 12rem;
-   /* right: 50%; 
+    z-index: 0;
+    right: 50%
+   /* 
     top: -10rem; 
-    width: 14rem; 
-    height: 14rem;
+    width: 10rem; 
+    height: 10rem;
     transform: translateX(50%);
-    z-index: 0;*/ 
+    */ 
   }
   .introContent {
     margin-top: 3rem;
