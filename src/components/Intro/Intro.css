@@ -298,8 +298,8 @@
   .bg {
     right: 50%; 
     top: -10rem; 
-    width: 20rem; 
-    height: 20rem;
+    width: 17rem; 
+    height: 17rem;
     transform: translateX(50%);
     z-index: 0; 
   }
