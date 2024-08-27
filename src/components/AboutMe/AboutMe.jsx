@@ -40,7 +40,7 @@ const AboutMe = () => {
   return (
     <div className="about-me-container" ref={containerRef}>
       <div className="about-me-image">
-        <img src={image} alt="Profile GIF" />
+        <img src={image} alt="Profile" />
       </div>
       <div className="about-me-content">
         <h2>About Me</h2>
