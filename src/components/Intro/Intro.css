@@ -320,12 +320,12 @@
     z-index: 1; */
   }
   .hello {
-   /* font-size: 6.5vw;*/
+   
    font-size: 2rem;
   }
   .introtext {
     font-size: 1.5rem; 
-   /* margin-bottom: 0.1rem;*/
+  
   }
   .introPara{
     font-size: 0.9rem;
